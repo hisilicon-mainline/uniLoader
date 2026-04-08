@@ -4,6 +4,8 @@ source "board/apple/Kconfig"
 
 source "board/google/Kconfig"
 
+source "board/honor/Kconfig"
+
 source "board/huawei/Kconfig"
 
 source "board/infinix/Kconfig"

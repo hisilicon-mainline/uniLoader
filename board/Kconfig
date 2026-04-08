@@ -17,6 +17,12 @@ menu "Board Support"
 		help
 		  Say Y if you want to include support for Google boards
 
+	config BOARD_HONOR
+		bool "Support for Honor boards"
+		default n
+		help
+		  Say Y if you want to include support for Honor boards
+
 	config BOARD_HUAWEI
 		bool "Support for Huawei boards"
 		default n

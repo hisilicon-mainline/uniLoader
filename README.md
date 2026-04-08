@@ -23,6 +23,9 @@ environment in case of a forced and buggy bootloader.
 ### Google
 - Taimen
 
+### Honor
+- Stanford
+
 ### Huawei
 - Anne
 - Agassi2

@@ -1,0 +1,9 @@
+menu "Honor board Support"
+	config HONOR_STANFORD
+		bool "Support for Honor 9"
+		default n
+		depends on HI3660
+		select BOARD_HONOR
+		help
+		  Say Y if you want to include support for Honor 9
+endmenu

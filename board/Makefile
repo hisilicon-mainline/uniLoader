@@ -1,6 +1,7 @@
 lib-$(CONFIG_BOARD_AMAZON) += amazon/
 lib-$(CONFIG_BOARD_APPLE) += apple/
 lib-$(CONFIG_BOARD_GOOGLE) += google/
+lib-$(CONFIG_BOARD_HONOR) += honor/
 lib-$(CONFIG_BOARD_HUAWEI) += huawei/
 lib-$(CONFIG_BOARD_INFINIX) += infinix/
 lib-$(CONFIG_BOARD_ITEL) += itel/
