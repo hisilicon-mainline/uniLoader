@@ -25,6 +25,7 @@ environment in case of a forced and buggy bootloader.
 
 ### Huawei
 - Agassi2
+- Victoria
 
 ### itel
 - P682LPN

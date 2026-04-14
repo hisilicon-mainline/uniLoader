@@ -6,4 +6,12 @@ menu "Huawei board Support"
 		select BOARD_HUAWEI
 		help
 		  Say Y if you want to include support for Huawei Mediapad T5
+
+	config HUAWEI_VICTORIA
+		bool "Support for Huawei P10"
+		default n
+		depends on HI3660
+		select BOARD_HUAWEI
+		help
+		  Say Y if you want to include support for Huawei P10
 endmenu
