@@ -16,4 +16,6 @@ menu "Drivers"
 		default y
 		help
 		  Say Y if you want to have Framebuffer output.
+
+source "drivers/uart/Kconfig"
 endmenu

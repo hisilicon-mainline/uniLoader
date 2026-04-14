@@ -5,21 +5,21 @@
 #include <board.h>
 #include <drivers/framework.h>
 #include <drivers/simplefb.h>
+#ifdef CONFIG_UART_DEBUG
+#include <lib/uart.h>
+#include <drivers/uart/virt-uart.h>
 
-volatile unsigned int* uart = (unsigned int*)0x9000000;
+static struct uart_info virt_uart = {
+	.address = (void *)0x9000000,
+};
+#endif
 
-void uart_putc(char ch)
+int virt_drv(void)
 {
-	*uart = ch;
-}
-
-void uart_puts(const char *s)
-{
-	while (*s != '\0') 
-	{
-		uart_putc(*s);
-		s++;
-	}
+#ifdef CONFIG_UART_DEBUG
+	REGISTER_DRIVER("virt-uart", virt_uart_probe, &virt_uart);
+#endif
+	return 0;
 }
 
 void enable_fpu(void)
@@ -41,6 +41,7 @@ int virt_init(void)
 struct board_data board_ops = {
 	.name = "qemu-virt",
 	.ops = {
+		.drivers_init = virt_drv,
 		.early_init = virt_init,
 	},
 	.quirks = 0

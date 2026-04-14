@@ -7,6 +7,7 @@
 #include <string.h>
 #include <stdarg.h>
 #include <lib/debug.h>
+#include <lib/uart.h>
 #include <drivers/simplefb.h>
 #include <lib/video/font.h>
 
@@ -24,7 +25,6 @@
 #define PRINTK_BUFFER_SIZE 256
 
 long int debug_linecount = 0;
-extern void uart_puts(const char *s);
 
 typedef struct {
 	const char *prefix;

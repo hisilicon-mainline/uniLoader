@@ -5,32 +5,27 @@
 #include <board.h>
 #include <drivers/framework.h>
 #include <lib/debug.h>
-
-#define UART_BASE		0x11001000
-
-#define UART_LSR_BASE	0x14
-#define UART_LSR_DR 	0x01 	/* Data ready */
-#define UART_LSR_THRE 	0x20 	/* TX holding register empty */
+#ifdef CONFIG_UART_DEBUG
+#include <lib/uart.h>
+#include <drivers/uart/mtk-uart.h>
+#endif
 
 #define WDT_BASE		0x1c00a000
 #define WDT_MODE_KEY	0x22000000
 #define WDT_MODE_EN		(1 << 0)
 
-void uart_putc(char ch)
-{
-	/* wait until TX is ready */
-	while (!(readl((void *)(UART_BASE + UART_LSR_BASE)) & UART_LSR_THRE))
-		;
+#ifdef CONFIG_UART_DEBUG
+static struct uart_info tetris_uart = {
+	.address = (void *)0x11001000,
+};
+#endif
 
-	writel(ch, (void *)UART_BASE); // thr is at offset 0x0, which is just uart_base
-}
-
-void uart_puts(const char *s)
+int tetris_drv(void)
 {
-	while (*s != '\0') {
-		uart_putc(*s);
-		s++;
-	}
+#ifdef CONFIG_UART_DEBUG
+	REGISTER_DRIVER("mtk-uart", mtk_uart_probe, &tetris_uart);
+#endif
+	return 0;
 }
 
 void tetris_disable_wdt(void)
@@ -62,6 +57,7 @@ int tetris_late_init(void)
 struct board_data board_ops = {
 	.name = "cmf-phone-1",
 	.ops = {
+		.drivers_init = tetris_drv,
 		.late_init = tetris_late_init,
 	},
 	.quirks = 0

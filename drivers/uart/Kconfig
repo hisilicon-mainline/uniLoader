@@ -1,0 +1,25 @@
+if UART_DEBUG
+config UART_IMX
+	bool "Support for IMX UART"
+	default FREESCALE
+	help
+	    Say Y if you have a device with the IMX UART.
+
+config UART_MTK
+	bool "Support for MediaTek UART"
+	default MEDIATEK
+	help
+	    Say Y if you have a device with the MediaTek UART.
+
+config UART_VIRT
+	bool "Support for Virt (QEMU) UART"
+	default QEMU
+	help
+	    Say Y if you have a device with the QEMU UART
+
+config UART_QCOM
+	bool "Support for Qualcomm UART"
+	default QUALCOMM
+	help
+	    Say Y if you have a device with the Qualcomm UART.
+endif

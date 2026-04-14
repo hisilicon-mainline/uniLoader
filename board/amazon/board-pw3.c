@@ -7,34 +7,27 @@
 #include <main/main.h>
 #include <drivers/framework.h>
 
-#define IMX6SL_UART1_BASE_ADDR	0x02020000
-#define URTX0_OFFSET		0x40
-#define IMX_UTS_OFFSET		0xB4
-#define UTS_TXFULL		(1 << 4)
+#ifdef CONFIG_UART_DEBUG
+#include <lib/uart.h>
+#include <drivers/uart/imx-uart.h>
 
-void uart_putc(char ch)
+static struct uart_info pw3_uart = {
+	.address = (void *)0x02020000,
+};
+#endif
+
+int pw3_drv(void)
 {
-	volatile uint32_t *uts_reg = (volatile
-				      uint32_t *)(IMX6SL_UART1_BASE_ADDR +
-						  IMX_UTS_OFFSET);
-	volatile uint32_t *urtx0_reg = (volatile
-					uint32_t *)(IMX6SL_UART1_BASE_ADDR +
-						    URTX0_OFFSET);
-
-	while ((*uts_reg) & UTS_TXFULL) { }
-
-	*urtx0_reg = (uint32_t)ch;
-}
-
-void uart_puts(const char *s)
-{
-	while (*s != '\0') {
-		uart_putc(*s);
-		s++;
-	}
+#ifdef CONFIG_UART_DEBUG
+	REGISTER_DRIVER("imx-uart", imx_uart_probe, &pw3_uart);
+#endif
+	return 0;
 }
 
 struct board_data board_ops = {
 	.name = "amazon-paperwhite3",
+	.ops = {
+		.drivers_init = pw3_drv,
+	},
 	.quirks = 0
 };
