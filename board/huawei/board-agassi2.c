@@ -5,6 +5,7 @@
  * Copyright (c) 2026, Tildeguy <tildeguy@mainlining.org>
  */
 
+#include <aarch64/fpu.h>
 #include <board.h>
 #include <drivers/framework.h>
 #include <drivers/simplefb.h>
@@ -22,10 +23,7 @@ static struct video_info agassi2_fb = {
 
 int agassi2_early_init(void)
 {
-	unsigned long cpacr;
-	__asm__ volatile ("mrs %0, cpacr_el1" : "=r" (cpacr));
-	cpacr |= (3UL << 20);
-	__asm__ volatile ("msr cpacr_el1, %0" :: "r" (cpacr));
+	aarch64_enable_fpu();
 	return 0;
 }
 

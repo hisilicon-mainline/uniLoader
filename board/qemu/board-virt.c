@@ -2,6 +2,7 @@
 /*
  * Copyright (c) 2025, Igor Belwon <igor.belwon@mentallysanemainliners.org>
  */
+#include <aarch64/fpu.h>
 #include <board.h>
 #include <drivers/framework.h>
 #include <drivers/simplefb.h>
@@ -22,19 +23,11 @@ int virt_drv(void)
 	return 0;
 }
 
-void enable_fpu(void)
-{
-	unsigned long cpacr;
-	__asm__ volatile ("mrs %0, cpacr_el1" : "=r" (cpacr));
-	cpacr |= (3UL << 20);
-	__asm__ volatile ("msr cpacr_el1, %0" :: "r" (cpacr));
-}
-
 int virt_init(void)
 {
 	// TODO: We can implement a framebuffer with QEMU. This would however
 	// require more setup.
-	enable_fpu();
+	aarch64_enable_fpu();
 	return 0;
 }
 
