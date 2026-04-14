@@ -5,7 +5,7 @@
 
 #include <board.h>
 #include <drivers/framework.h>
-#include <lib/simplefb.h>
+#include <drivers/simplefb.h>
 
 static struct video_info x6710_fb = {
 	.format = FB_FORMAT_ARGB8888,

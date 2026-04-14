@@ -7,8 +7,8 @@
 
 #include <string.h>
 #include <drivers/framework.h>
+#include <drivers/simplefb.h>
 #include <lib/video/font.h>
-#include <lib/simplefb.h>
 
 struct video_info *fb_info;
 

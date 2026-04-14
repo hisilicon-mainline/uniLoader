@@ -7,7 +7,7 @@
 
 #include <board.h>
 #include <drivers/framework.h>
-#include <lib/simplefb.h>
+#include <drivers/simplefb.h>
 #include <soc/exynos7885.h>
 
 // Early initialization

@@ -2,7 +2,7 @@
 
 #include <board.h>
 #include <drivers/framework.h>
-#include <lib/simplefb.h>
+#include <drivers/simplefb.h>
 
 #ifdef CONFIG_SIMPLE_FB
 static struct video_info r0q_fb = {

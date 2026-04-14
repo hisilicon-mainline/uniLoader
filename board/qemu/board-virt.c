@@ -4,7 +4,7 @@
  */
 #include <board.h>
 #include <drivers/framework.h>
-#include <lib/simplefb.h>
+#include <drivers/simplefb.h>
 
 volatile unsigned int* uart = (unsigned int*)0x9000000;
 

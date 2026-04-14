@@ -10,6 +10,10 @@ menu "Drivers"
 		default n
 		help
 		    Say Y if you have a device with the Samsung Exynos SPEEDY bus.
-    
 
+	config SIMPLE_FB
+		bool "Support for Simple Framebuffer"
+		default y
+		help
+		  Say Y if you want to have Framebuffer output.
 endmenu

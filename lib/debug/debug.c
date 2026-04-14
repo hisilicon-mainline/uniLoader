@@ -7,7 +7,7 @@
 #include <string.h>
 #include <stdarg.h>
 #include <lib/debug.h>
-#include <lib/simplefb.h>
+#include <drivers/simplefb.h>
 #include <lib/video/font.h>
 
 #define NANOPRINTF_IMPLEMENTATION

@@ -5,7 +5,7 @@
 
 #include <board.h>
 #include <drivers/framework.h>
-#include <lib/simplefb.h>
+#include <drivers/simplefb.h>
 
 #ifdef CONFIG_SIMPLE_FB
 // Used on miui 12.5.8.0 firmware

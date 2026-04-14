@@ -5,7 +5,7 @@
 
 #include <board.h>
 #include <drivers/framework.h>
-#include <lib/simplefb.h>
+#include <drivers/simplefb.h>
 #include <soc/exynos3830.h>
 #include <stdint.h>
 

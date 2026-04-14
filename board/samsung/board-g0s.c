@@ -4,7 +4,7 @@
  */
 #include <board.h>
 #include <drivers/framework.h>
-#include <lib/simplefb.h>
+#include <drivers/simplefb.h>
 #include <drivers/samsung/exynos-acpm.h>
 #include "s2mps25-26-pmic.h"
 

@@ -7,7 +7,7 @@
 
 #include <board.h>
 #include <drivers/framework.h>
-#include <lib/simplefb.h>
+#include <drivers/simplefb.h>
 #include <lib/debug.h>
 
 #define UART_BASE 0x11002000

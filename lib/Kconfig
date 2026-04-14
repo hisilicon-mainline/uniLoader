@@ -1,10 +1,4 @@
 menu "Libraries"
-	config SIMPLE_FB
-		bool "Support for Simple Framebuffer"
-		default y
-		help
-		  Say Y if you want to have Framebuffer output.
-
 	config UART_DEBUG
 		bool "Support for UART debugging"
 		default n

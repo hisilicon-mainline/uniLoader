@@ -5,7 +5,7 @@
 
 #include <board.h>
 #include <drivers/framework.h>
-#include <lib/simplefb.h>
+#include <drivers/simplefb.h>
 
 #define ANA_W_TIMEOUT_NUM	(10000)
 #define W_UNLOCK_KEY		0xE551

@@ -5,7 +5,7 @@
 #include <board.h>
 #include <string.h>
 #include <drivers/framework.h>
-#include <lib/simplefb.h>
+#include <drivers/simplefb.h>
 
 #define TOPRGU_BASE 0x10212000
 #define WDT_MODE_KEY 0x22000000

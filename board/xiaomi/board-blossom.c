@@ -1,6 +1,6 @@
 #include <board.h>
 #include <drivers/framework.h>
-#include <lib/simplefb.h>
+#include <drivers/simplefb.h>
 #include <lib/debug.h>
 
 /* This is a generic uniLoader port for Xiaomi Blossom devices:

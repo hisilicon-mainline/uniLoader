@@ -6,7 +6,7 @@
 #include <stdint.h>
 #include <string.h>
 #include <drivers/framework.h>
-#include <lib/simplefb.h>
+#include <drivers/simplefb.h>
 #include <lib/debug.h>
 #include <soc/exynos8895.h>
 #include <drivers/samsung/exynos-speedy.h>

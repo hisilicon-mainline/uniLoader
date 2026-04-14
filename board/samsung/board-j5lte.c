@@ -6,7 +6,7 @@
 #include <board.h>
 #include <main/main.h>
 #include <drivers/framework.h>
-#include <lib/simplefb.h>
+#include <drivers/simplefb.h>
 
 #define PIPE_BASE			0x1a15000
 #define PIPE_SSPP_SRC_FORMAT		0x30

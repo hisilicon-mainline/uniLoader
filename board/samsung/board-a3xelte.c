@@ -6,7 +6,7 @@
 #include <stdint.h>
 #include <string.h>
 #include <drivers/framework.h>
-#include <lib/simplefb.h>
+#include <drivers/simplefb.h>
 #include <lib/debug.h>
 
 #define DECON_F_BASE			0x14830000

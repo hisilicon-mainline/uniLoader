@@ -5,7 +5,7 @@
  */
 #include <board.h>
 #include <drivers/framework.h>
-#include <lib/simplefb.h>
+#include <drivers/simplefb.h>
 
 #define DECON_F_BASE		0x13930000
 #define HW_SW_TRIG_CONTROL	0x6b0
