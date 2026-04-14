@@ -3,12 +3,12 @@
  * Copyright (c) 2026, Igor Belwon <igor.belwon@mentallysanemainliners.org>
  */
 
-#include <drivers/ramdisk-handler.h>
+#include <lib/fixfdt/ramdisk-handler.h>
 #include <lib/debug.h>
 
 static char fdt_buf[CONFIG_FDT_BUF_SIZE];
 
-void patch_dtb(void* dt)
+void patch_fdt(void* dt)
 {
 	int ret;
 

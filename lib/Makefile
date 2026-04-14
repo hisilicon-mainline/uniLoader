@@ -17,4 +17,8 @@ lib-$(CONFIG_LIBFDT) += \
 	libfdt/fdt_sw.o \
 	libfdt/fdt_strerror.o
 
+lib-$(CONFIG_LIBFDT) += \
+	fixfdt/patch-fdt.o \
+	fixfdt/ramdisk-handler.o
+
 ccflags-y += -I$(srctree)/include/lib/libfdt

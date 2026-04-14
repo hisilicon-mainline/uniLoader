@@ -7,6 +7,7 @@
 #include <main/boot.h>
 #include <main/main.h>
 #include <lib/debug.h>
+#include <lib/fixfdt/patch-fdt.h>
 
 extern struct board_data board_ops;
 
@@ -32,7 +33,12 @@ void main(void* dt, void* kernel, void* ramdisk)
 
 	INITCALL(board_ops.ops.late_init);
 
-	boot_kernel(dt, kernel, ramdisk);
+#ifdef CONFIG_LIBFDT
+	patch_fdt(dt);
+#endif
+
+	printk(KERN_INFO, "Booting kernel...\n");
+	arch_load_kernel(kernel, dt, ramdisk);
 
 	// todo: reset the board?
 	printk(KERN_EMERG, "Something wrong happened, we shouldn't be here. Hanging....\n");

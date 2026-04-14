@@ -3,8 +3,8 @@
  * Copyright (c) 2025, Victor Paul <vipollmail@gmail.com>
  */
 
-#include <drivers/ramdisk-handler.h>
 #include <lib/debug.h>
+#include <lib/fixfdt/ramdisk-handler.h>
 #include <lib/libfdt/libfdt.h>
 
 int ramdisk_handler_patch_dtb(const void *fdt, void *buf, int bufsize)

@@ -3,9 +3,9 @@
  * Copyright (c) 2026, Igor Belwon <igor.belwon@mentallysanemainliners.org>
  */
 
-#ifndef BOOT_FDT_H_
-#define BOOT_FDT_H_
+#ifndef PATCH_FDT_H_
+#define PATCH_FDT_H_
 
-void patch_dtb(void* dt);
+void patch_fdt(void* dt);
 
-#endif // BOOT_FDT_H_
+#endif // PATCH_DTB_H_
