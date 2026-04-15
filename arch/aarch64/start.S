@@ -25,6 +25,14 @@ _stack_size:
 .align 4
 #endif
 ENTRY(_start)
+#ifdef CONFIG_LIBFDT
+	/*
+	 * Bootloader will store the address of the FDT in x0, copy it to x3
+	 * so we can use it later.
+	 */
+	mov     x3, x0
+#endif
+
 	/* Set up the base address for the stack */
 	adrp    x0, _stack_end      /* Load page of the _stack_end symbol */
 	add     x0, x0, #:lo12:_stack_end  /* Add the offset within the page */

@@ -24,7 +24,7 @@ static void print_splash(void)
 	printk(KERN_INFO, "welcome to uniLoader %s on %s\n", VER_TAG, board_ops.name);
 }
 
-void main(void* dt, void* kernel, void* ramdisk)
+void main(void* dt, void* kernel, void* ramdisk, void *bootloader_fdt)
 {
 	INITCALL(board_ops.ops.early_init);
 	INITCALL(board_ops.ops.drivers_init);
@@ -34,7 +34,7 @@ void main(void* dt, void* kernel, void* ramdisk)
 	INITCALL(board_ops.ops.late_init);
 
 #ifdef CONFIG_LIBFDT
-	patch_fdt(dt);
+	dt = patch_fdt(&board_ops, dt, bootloader_fdt);
 #endif
 
 	printk(KERN_INFO, "Booting kernel...\n");

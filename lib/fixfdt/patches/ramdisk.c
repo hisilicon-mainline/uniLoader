@@ -4,20 +4,13 @@
  */
 
 #include <lib/debug.h>
-#include <lib/fixfdt/ramdisk-handler.h>
+#include <lib/fixfdt/patches/ramdisk.h>
 #include <lib/libfdt/libfdt.h>
 
-int ramdisk_handler_patch_dtb(const void *fdt, void *buf, int bufsize)
+int ramdisk_fdt_patch(const void* bootloader_fdt, void *buf)
 {
 	int ret, dtb_chosen_offset;
 	void *ramdisk_end = (void*)CONFIG_RAMDISK_ENTRY + (unsigned long)&ramdisk_size;
-
-	printk(KERN_INFO, "trying to open fdt...\n");
-	ret = fdt_open_into(fdt, buf, bufsize);
-	if (ret < 0) {
-		printk(KERN_ERR, "fdt_open_into() failed: %s\n", fdt_strerror(ret));
-		return ret;
-	}
 
 	dtb_chosen_offset = fdt_path_offset(buf, "/chosen");
 	if (dtb_chosen_offset < 0) {
@@ -46,6 +39,5 @@ int ramdisk_handler_patch_dtb(const void *fdt, void *buf, int bufsize)
 		printk(KERN_ERR, "failed to add linux,initrd-end: %s\n", fdt_strerror(ret));
 		return ret;
 	}
-
 	return 0;
 }

@@ -16,7 +16,10 @@ lib-$(CONFIG_LIBFDT) += \
 	libfdt/fdt_strerror.o
 
 lib-$(CONFIG_LIBFDT) += \
-	fixfdt/patch-fdt.o \
-	fixfdt/ramdisk-handler.o
+	fixfdt/patch-fdt.o
+
+ifneq ($(CONFIG_RAMDISK_NO_COPY),y)
+lib-$(CONFIG_LIBFDT) += fixfdt/patches/ramdisk.o
+endif
 
 ccflags-y += -I$(srctree)/include/lib/libfdt
