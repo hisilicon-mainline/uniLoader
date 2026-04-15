@@ -7,16 +7,11 @@
 #include <array.h>
 #include <board.h>
 #include <lib/fixfdt/fdt-patch.h>
-#include <lib/fixfdt/patches/memory.h>
-#include <lib/fixfdt/patches/ramdisk.h>
 #include <lib/libfdt/libfdt.h>
 #include <lib/debug.h>
 
 static const fdt_patch default_fdt_patches[] = {
-	memory_fdt_patch,
-#ifndef CONFIG_RAMDISK_NO_COPY
-	ramdisk_fdt_patch,
-#endif
+	FDT_DEFAULT_PATCH_LIST
 };
 
 static char fdt_buf[CONFIG_FDT_BUF_SIZE];
