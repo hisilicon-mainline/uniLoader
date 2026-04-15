@@ -24,6 +24,7 @@ environment in case of a forced and buggy bootloader.
 - Taimen
 
 ### Huawei
+- Anne
 - Agassi2
 - Victoria
 

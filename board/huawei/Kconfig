@@ -7,6 +7,14 @@ menu "Huawei board Support"
 		help
 		  Say Y if you want to include support for Huawei Mediapad T5
 
+	config HUAWEI_ANNE
+		bool "Support for Huawei P20 Lite"
+		default n
+		depends on HI6250
+		select BOARD_HUAWEI
+		help
+		  Say Y if you want to include support for Huawei P20 Lite
+
 	config HUAWEI_VICTORIA
 		bool "Support for Huawei P10"
 		default n
