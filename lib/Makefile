@@ -16,7 +16,8 @@ lib-$(CONFIG_LIBFDT) += \
 	libfdt/fdt_strerror.o
 
 lib-$(CONFIG_LIBFDT) += \
-	fixfdt/patch-fdt.o
+	fixfdt/patch-fdt.o \
+	fixfdt/patches/memory.o
 
 ifneq ($(CONFIG_RAMDISK_NO_COPY),y)
 lib-$(CONFIG_LIBFDT) += fixfdt/patches/ramdisk.o
