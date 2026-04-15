@@ -32,5 +32,4 @@ struct board_data board_ops = {
 	.ops = {
 		.drivers_init = blossom_drv,
 	},
-	.quirks = 0
 };

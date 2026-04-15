@@ -39,5 +39,4 @@ struct board_data board_ops = {
 	.ops = {
 		.drivers_init = camellia_drv,
 	},
-	.quirks = 0
 };

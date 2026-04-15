@@ -21,7 +21,6 @@ struct board_ops {
 struct board_data {
 	const char *name;
 	struct board_ops ops;
-	unsigned int quirks;
 #ifdef CONFIG_LIBFDT
 	const fdt_patch *fdt_patches;
 	int nr_fdt_patches;

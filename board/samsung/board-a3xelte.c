@@ -43,5 +43,4 @@ struct board_data board_ops = {
 		.early_init = a3xelte_init,
 		.drivers_init = a3xelte_drv,
 	},
-	.quirks = 0
 };

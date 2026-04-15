@@ -27,5 +27,4 @@ struct board_data board_ops = {
 	.ops = {
 		.drivers_init = r0q_drv
 	},
-	.quirks = 0
 };

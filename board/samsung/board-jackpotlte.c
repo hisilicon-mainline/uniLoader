@@ -42,5 +42,4 @@ struct board_data board_ops = {
 		.early_init = jackpotlte_init,
 		.drivers_init = jackpotlte_drv,
 	},
-	.quirks = 0
 };

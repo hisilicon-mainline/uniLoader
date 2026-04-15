@@ -60,5 +60,4 @@ struct board_data board_ops = {
 		.drivers_init = tetris_drv,
 		.late_init = tetris_late_init,
 	},
-	.quirks = 0
 };

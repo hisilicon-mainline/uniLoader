@@ -42,5 +42,4 @@ struct board_data board_ops = {
 		.early_init = gta4xl_init,
 		.drivers_init = gta4xl_drv,
 	},
-	.quirks = 0
 };

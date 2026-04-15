@@ -37,5 +37,4 @@ struct board_data board_ops = {
 		.drivers_init = virt_drv,
 		.early_init = virt_init,
 	},
-	.quirks = 0
 };

@@ -44,5 +44,4 @@ struct board_data board_ops = {
 		.early_init = beyond1lte_init,
 		.drivers_init = beyond1lte_drv,
 	},
-	.quirks = 0
 };

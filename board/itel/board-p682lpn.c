@@ -109,5 +109,4 @@ struct board_data board_ops = {
 		.early_init = p682lpn_init,
 		.drivers_init = p682lpn_drv,
 	},
-	.quirks = 0
 };

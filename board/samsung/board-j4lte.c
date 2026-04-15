@@ -42,5 +42,4 @@ struct board_data board_ops = {
 		.early_init = j4lte_init,
 		.drivers_init = j4lte_drv,
 	},
-	.quirks = 0
 };

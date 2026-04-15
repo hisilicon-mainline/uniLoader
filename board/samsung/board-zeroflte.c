@@ -42,5 +42,4 @@ struct board_data board_ops = {
 		.early_init = zeroflte_init,
 		.drivers_init = zeroflte_drv,
 	},
-	.quirks = 0
 };

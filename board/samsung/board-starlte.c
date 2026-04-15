@@ -42,5 +42,4 @@ struct board_data board_ops = {
 		.early_init = starlte_init,
 		.drivers_init = starlte_drv,
 	},
-	.quirks = 0
 };

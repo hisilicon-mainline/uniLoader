@@ -41,5 +41,4 @@ struct board_data board_ops = {
 		.early_init = c1s_init,
 		.drivers_init = c1s_drv,
 	},
-	.quirks = 0
 };

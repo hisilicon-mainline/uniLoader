@@ -29,5 +29,4 @@ struct board_data board_ops = {
 	.ops = {
 		.drivers_init = pw3_drv,
 	},
-	.quirks = 0
 };

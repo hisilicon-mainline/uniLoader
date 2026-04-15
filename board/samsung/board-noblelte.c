@@ -42,5 +42,4 @@ struct board_data board_ops = {
 		.early_init = noblelte_init,
 		.drivers_init = noblelte_drv,
 	},
-	.quirks = 0
 };

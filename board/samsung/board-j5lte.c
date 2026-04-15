@@ -51,5 +51,4 @@ struct board_data board_ops = {
 		.early_init = j5lte_init,
 		.drivers_init = j5lte_drv,
 	},
-	.quirks = 0
 };

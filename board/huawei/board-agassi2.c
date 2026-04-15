@@ -41,5 +41,4 @@ struct board_data board_ops = {
 		.early_init = agassi2_early_init,
 		.drivers_init = agassi2_drv
 	},
-	.quirks = 0
 };

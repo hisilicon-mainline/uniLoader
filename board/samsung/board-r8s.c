@@ -42,5 +42,4 @@ struct board_data board_ops = {
 		.early_init = r8s_init,
 		.drivers_init = r8s_drv,
 	},
-	.quirks = 0
 };

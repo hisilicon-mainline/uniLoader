@@ -51,5 +51,4 @@ struct board_data board_ops = {
 		.early_init = herolte_init,
 		.drivers_init = herolte_drv,
 	},
-	.quirks = 0
 };

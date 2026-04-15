@@ -145,5 +145,4 @@ struct board_data board_ops = {
 		.drivers_init = dreamlte_drv,
 		.late_init = dreamlte_late_init,
 	},
-	.quirks = 0
 };

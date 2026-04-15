@@ -42,5 +42,4 @@ struct board_data board_ops = {
 		.early_init = a305f_init,
 		.drivers_init = a305f_drv,
 	},
-	.quirks = 0
 };
