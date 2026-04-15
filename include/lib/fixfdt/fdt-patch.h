@@ -6,6 +6,7 @@
 #ifndef FDT_PATCH_H_
 #define FDT_PATCH_H_
 
+#include <array.h>
 #include <lib/fixfdt/patches/memory.h>
 
 #ifndef CONFIG_RAMDISK_NO_COPY
@@ -18,6 +19,10 @@
 #define FDT_DEFAULT_PATCH_LIST \
 	RAMDISK_PATCH \
 	memory_fdt_patch
+
+#define DEFINE_FDT_PATCHES(patches)		\
+	.fdt_patches = (patches),		\
+	.nr_fdt_patches = ARRAY_SIZE(patches)	\
 
 typedef int (*fdt_patch)(const void *bootloader_fdt, void *fdt);
 
