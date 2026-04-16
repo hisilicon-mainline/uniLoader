@@ -1,0 +1,9 @@
+menu "Volla board Support"
+	config VOLLA_ALGIZ
+		bool "Support for Volla Phone Quintus"
+		default n
+		depends on MT6877
+		select BOARD_VOLLA
+		help
+		  Say Y if you want to include support for Volla Phone Quintus
+endmenu

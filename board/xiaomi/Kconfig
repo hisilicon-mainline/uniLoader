@@ -1,0 +1,28 @@
+menu "Xiaomi board Support"
+	config XIAOMI_BEGONIA
+		bool "Support for Redmi Note 8 Pro"
+		default n
+		depends on MT6785
+		select BOARD_XIAOMI
+		help
+		  Say Y if you want to include support for Redmi Note 8 Pro
+
+	config XIAOMI_BLOSSOM
+		bool "Support for Xiaomi Blossom devices"
+		default n
+		depends on MT6765
+		select BOARD_XIAOMI
+		help
+		  Say Y if you want to include support for Xiaomi Blossom
+		  devices (R Vendor only):
+		  Redmi 9A, Redmi 9I, Redmi 9AT, Redmi 10A, Redmi 9A Sport, Redmi 9I Sport,
+		  Poco C3, Poco C31, Redmi 9C, Redmi 9C NFC, Redmi 9 India, Redmi 9 Active.
+
+	config XIAOMI_CAMELLIA
+		bool "Support for Xiaomi Poco M3 Pro 5G"
+		default n
+		depends on MT6833
+		select BOARD_XIAOMI
+		help
+		  Say Y if you want to include support for Poco M3 Pro 5G
+endmenu

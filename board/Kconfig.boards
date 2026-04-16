@@ -1,0 +1,23 @@
+source "board/amazon/Kconfig"
+
+source "board/apple/Kconfig"
+
+source "board/google/Kconfig"
+
+source "board/huawei/Kconfig"
+
+source "board/infinix/Kconfig"
+
+source "board/itel/Kconfig"
+
+source "board/nokia/Kconfig"
+
+source "board/nothing/Kconfig"
+
+source "board/qemu/Kconfig"
+
+source "board/samsung/Kconfig"
+
+source "board/volla/Kconfig"
+
+source "board/xiaomi/Kconfig"

@@ -1,0 +1,9 @@
+menu "Google board Support"
+	config GOOGLE_TAIMEN
+		bool "Support for Google Pixel 2 XL"
+		default n
+		depends on MSM8998
+		select BOARD_GOOGLE
+		help
+		  Say Y if you want to include support for Pixel 2 XL
+endmenu

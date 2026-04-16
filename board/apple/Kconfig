@@ -1,0 +1,9 @@
+menu "Apple board Support"
+	config APPLE_N61AP
+		bool "Support for Apple iPhone 6"
+		default n
+		depends on APPLE_T7000
+		select BOARD_APPLE
+		help
+		  Say Y if you want to include support for iPhone 6
+endmenu

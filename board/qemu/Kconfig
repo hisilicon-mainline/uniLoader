@@ -1,0 +1,10 @@
+menu "Qemu board Support"
+	config QEMU_BOARD_VIRT
+		bool "Support for QEMU virt platform (aarch64)"
+		default n
+		depends on QEMU_SOC_VIRT
+		select BOARD_QEMU
+		help
+		  Say Y if you are using the generic QEMU emulation
+		  platform target - virt.
+endmenu

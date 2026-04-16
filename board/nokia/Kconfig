@@ -1,0 +1,9 @@
+menu "Nokia board Support"
+	config NOKIA_ESSENTIAL
+		bool "Support for Nokia 3"
+		default n
+		depends on MT6735
+		select BOARD_NOKIA
+		help
+		  Say Y if you want to include support for Nokia 3
+endmenu

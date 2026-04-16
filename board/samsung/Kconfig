@@ -1,0 +1,161 @@
+menu "Samsung board Support"
+	config SAMSUNG_A105F
+		bool "Support for Samsung Galaxy A10"
+		default n
+		depends on EXYNOS_7885
+		select BOARD_SAMSUNG
+		help
+		   Say Y if you want to include support for Samsung Galaxy A10
+
+	config SAMSUNG_A127F
+		bool "Support for Samsung Galaxy A12 Nacho"
+		default n
+		depends on EXYNOS_3830
+		select BOARD_SAMSUNG
+		help
+		  Say Y if you want to include support for Samsung Galaxy A12 Nacho
+
+	config SAMSUNG_A305F
+		bool "Support for Samsung Galaxy A30"
+		default n
+		depends on EXYNOS_7885
+		select BOARD_SAMSUNG
+		help
+		   Say Y if you want to include support for Samsung Galaxy A30
+
+	config SAMSUNG_A336B
+		bool "Support for Samsung Galaxy A33"
+		default n
+		depends on EXYNOS_1280
+		select BOARD_SAMSUNG
+		help
+		  Say Y if you want to include support for Samsung Galaxy A33
+
+	config SAMSUNG_A3XELTE
+		bool "Support for Samsung Galaxy A3 2016"
+		default n
+		depends on EXYNOS_7580
+		select BOARD_SAMSUNG
+		help
+		  Say Y if you want to include support for Samsung Galaxy A3 2016
+
+	config SAMSUNG_BEYOND1LTE
+		bool "Support for Samsung Galaxy S10"
+		default n
+		depends on EXYNOS_9820
+		select BOARD_SAMSUNG
+		help
+		  Say Y if you want to include support for Samsung Galaxy S10
+
+	config SAMSUNG_C1S
+		bool "Support for Samsung Galaxy Note 20"
+		default n
+		depends on EXYNOS_990
+		select BOARD_SAMSUNG
+		help
+		  Say Y if you want to include support for Samsung Galaxy Note 20
+
+	config SAMSUNG_DREAMLTE
+		bool "Support for Samsung Galaxy S8"
+		default n
+		depends on EXYNOS_8895
+		select BOARD_SAMSUNG
+		help
+		  Say Y if you want to include support for Samsung Galaxy S8
+
+	config SAMSUNG_G0S
+		bool "Support for Samsung Galaxy S22+"
+		default n
+		depends on EXYNOS_2200
+		select BOARD_SAMSUNG
+		help
+		  Say Y if you want to include support for Samsung Galaxy S22+
+
+	config SAMSUNG_GTA4XL
+		bool "Support for Samsung Galaxy Tab S6 Lite"
+		default n
+		depends on EXYNOS_9610
+		select BOARD_SAMSUNG
+		help
+		  Say Y if you want to include support for Samsung Galaxy Tab S6 Lite
+
+	config SAMSUNG_HEROLTE
+		bool "Support for Samsung Galaxy S7"
+		default n
+		depends on EXYNOS_8890
+		select BOARD_SAMSUNG
+		help
+		  Say Y if you want to include support for Samsung Galaxy S7
+
+	config SAMSUNG_J4LTE
+		bool "Support for Samsung Galaxy J4 2018"
+		default n
+		depends on EXYNOS_7570
+		select BOARD_SAMSUNG
+		help
+		  Say Y if you want to include arm64 support for Samsung Galaxy J4 2018
+
+	config SAMSUNG_J5LTE
+		bool "Support for Samsung Galaxy J5 2015"
+		default n
+		depends on QC32_8916
+		select BOARD_SAMSUNG
+		help
+		  Say Y if you want to include arm32 support for Samsung Galaxy J5 2015
+
+	config SAMSUNG_JACKPOTLTE
+		bool "Support for Samsung Galaxy A8 (2018)"
+		default n
+		depends on EXYNOS_7885
+		select BOARD_SAMSUNG
+		help
+		  Say Y if you want to include support for Samsung Galaxy A8 (2018)
+
+	config SAMSUNG_NOBLELTE
+		bool "Support for Samsung Galaxy Note5"
+		default n
+		depends on EXYNOS_7420
+		select BOARD_SAMSUNG
+		help
+		  Say Y if you want to include support for Samsung Galaxy Note 5
+
+	config SAMSUNG_R0Q
+		bool "Support for Samsung Galaxy S22"
+		default n
+		depends on SM8450
+		select BOARD_SAMSUNG
+		help
+		  Say Y if you want to include support for Samsung Galaxy S22
+
+	config SAMSUNG_R8S
+		bool "Support for Samsung Galaxy S20 FE"
+		default n
+		depends on EXYNOS_990
+		select BOARD_SAMSUNG
+		help
+		  Say Y if you want to include support for Samsung Galaxy S20 FE
+
+	config SAMSUNG_STARLTE
+		bool "Support for Samsung Galaxy S9"
+		default n
+		depends on EXYNOS_9810
+		select BOARD_SAMSUNG
+		help
+		  Say Y if you want to include support for Samsung Galaxy S9
+
+	config SAMSUNG_X1S
+		bool "Support for Samsung Galaxy S20"
+		default n
+		depends on EXYNOS_990
+		select BOARD_SAMSUNG
+		help
+		  Say Y if you want to include support for Samsung Galaxy S20
+
+	config SAMSUNG_ZEROFLTE
+		bool "Support for Samsung Galaxy S6"
+		default n
+		depends on EXYNOS_7420
+		select BOARD_SAMSUNG
+		help
+		  Say Y if you want to include support for Samsung Galaxy S6
+endmenu

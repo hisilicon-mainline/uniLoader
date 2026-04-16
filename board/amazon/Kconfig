@@ -1,0 +1,10 @@
+menu "Amazon board Support"
+	config AMAZON_PW3
+		bool "Support for Amazon Kindle Paperwhite 3"
+		default n
+		depends on FREESCALE_IMX6SL
+		select BOARD_AMAZON
+		help
+		  Say Y if you want to include support for Amazon Kindle
+		  Paperwhite 3
+endmenu

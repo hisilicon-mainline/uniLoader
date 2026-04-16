@@ -5,6 +5,7 @@ uniLoader
 main/*.o
 arch/*/linker.lds
 board/*/*.o*
+board/*/*.a*
 board/*.a*
 soc/*/*.o*
 soc/*.a*

@@ -1,0 +1,9 @@
+menu "Huawei board Support"
+	config HUAWEI_AGASSI2
+		bool "Support for Huawei Mediapad T5"
+		default n
+		depends on HI6250
+		select BOARD_HUAWEI
+		help
+		  Say Y if you want to include support for Huawei Mediapad T5
+endmenu

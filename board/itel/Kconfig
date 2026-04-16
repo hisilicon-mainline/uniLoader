@@ -1,0 +1,9 @@
+menu "Itel board Support"
+	config ITEL_P682LPN
+		bool "Support for itel Vision 3 Plus"
+		default n
+		depends on UMS9230
+		select BOARD_ITEL
+		help
+		  Say Y if you want to include support for itel Vision 3 Plus
+endmenu
