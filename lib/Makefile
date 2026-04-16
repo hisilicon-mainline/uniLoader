@@ -3,6 +3,7 @@ lib-y += compiler-rt.o
 # debug
 lib-y += debug/debug.o
 lib-$(CONFIG_UART_DEBUG) += debug/uart.o
+lib-$(CONFIG_SIMPLE_FB) += video/font.o
 
 # unic (neatlibc still temporarily resides)
 lib-y += unic/string.o

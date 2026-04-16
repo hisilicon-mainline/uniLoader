@@ -121,7 +121,7 @@ void __simplefb_raw_print(const char *text, int text_x, int text_y,
 			current_y = 5;
 		}
 
-		int ix = font_index(text[i]);
+		int ix = FONT_INDEX(text[i]);
 		unsigned char *img = letters[ix];
 
 		// Draw the character as a scaled bitmap
