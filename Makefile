@@ -119,7 +119,7 @@ CONFIG_SHELL := $(shell if [ -x "$$BASH" ]; then echo $$BASH; \
 HOSTCC       = gcc
 HOSTCXX      = g++
 HOSTCFLAGS   = -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 \
-               -fomit-frame-pointer -Wno-builtin-declaration-mismatch
+               -fomit-frame-pointer
 HOSTCXXFLAGS = -O2
 
 # Beautify output
@@ -184,7 +184,7 @@ INSTALLKERNEL  := installkernel
 PERL		= perl
 
 CHECKFLAGS     := -D__linux__ -Dlinux -D__STDC__ -Dunix -D__unix__ \
-		  -Wbitwise -Wno-return-void $(CF)
+		  -Wbitwise $(CF)
 CFLAGS_KERNEL	=
 AFLAGS_KERNEL	=
 
@@ -196,13 +196,12 @@ LINUXINCLUDE    := -Iinclude \
 
 KBUILD_CPPFLAGS := -D__KERNEL__
 
-KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
+KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes \
 		   -fno-strict-aliasing -fno-common \
 		   -fno-stack-protector \
 		   -Werror-implicit-function-declaration \
-		   -Wno-format-security \
 		   -fno-delete-null-pointer-checks \
-		   -Wno-builtin-declaration-mismatch -Wno-main -nostdinc \
+		   -Wno-main -nostdinc \
 		   -I$(srctree)/lib/unic
 
 # Try to get the version from Git has
