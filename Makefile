@@ -399,7 +399,8 @@ quiet_cmd_uniloader_link = LD      $@.o
       cmd_uniloader_link = $(LD) $(uniloader-main-y) \
                                  --start-group $(uniloader-libs) $(LIBGCC) --end-group \
                                  -o $@.o \
-                                 --script=arch/$(ARCH)/linker.lds
+                                 --script=arch/$(ARCH)/linker.lds \
+                                 --no-warn-rwx-segments
 
 quiet_cmd_uniloader_objcopy = OBJCOPY $@
       cmd_uniloader_objcopy = $(OBJCOPY) -O binary $@.o $@
