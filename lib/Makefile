@@ -24,4 +24,9 @@ ifneq ($(CONFIG_RAMDISK_NO_COPY),y)
 lib-$(CONFIG_LIBFDT) += fixfdt/patches/ramdisk.o
 endif
 
+ifneq ($(wildcard $(CONFIG_CMDLINE_PATH:"%"=%)),)
+ccflags-y += -DCMDLINE_STR='"$(shell cat $(CONFIG_CMDLINE_PATH) | tr -d '\n')"'
+lib-$(CONFIG_LIBFDT) += fixfdt/patches/cmdline.o
+endif
+
 ccflags-y += -I$(srctree)/include/lib/libfdt

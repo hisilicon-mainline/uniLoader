@@ -19,6 +19,7 @@ include/generated/autoconf.h
 include/config
 boot.img
 blob/Image
+blob/cmdline
 blob/dtb
 drivers/*.a
 blob/ramdisk

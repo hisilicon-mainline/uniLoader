@@ -16,8 +16,16 @@
 #define RAMDISK_PATCH
 #endif
 
+#ifdef CMDLINE_STR
+#include <lib/fixfdt/patches/cmdline.h>
+#define CMDLINE_PATCH cmdline_fdt_patch,
+#else
+#define CMDLINE_PATCH
+#endif
+
 #define FDT_DEFAULT_PATCH_LIST \
 	RAMDISK_PATCH \
+	CMDLINE_PATCH \
 	memory_fdt_patch
 
 #define DEFINE_FDT_PATCHES(patches)		\

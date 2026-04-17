@@ -66,6 +66,13 @@ menu "Building options"
 		help
 		  Select this if the bootloader copies the ramdisk itself
 
+	config CMDLINE_PATH
+		string "Path to cmdline file"
+		depends on EMBED_LINUX
+		default blob/cmdline
+		help
+		  Path to the cmdline file to embed
+
 endmenu
 
 source "drivers/Kconfig"
